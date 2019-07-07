@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install -g node-inspector --unsafe-perm=true --allow-root' 
+                sh 'sudo npm install -g node-inspector --unsafe-perm=true --allow-root' 
             }
         }
     }
