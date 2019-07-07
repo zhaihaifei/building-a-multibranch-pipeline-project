@@ -16,7 +16,14 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                sh './jenkins/scripts/test.sh' 
+                sh 'npm -v'
+            }
+        }
+        stage('Deliver') { 
+            steps {
+                sh 'npm -v'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
+                sh 'npm -v'
             }
         }
     }
